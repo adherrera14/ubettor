@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  line-height: 1.5;
+  background: linear-gradient(45deg,
+      rgba(27, 39, 60, 1) 0%,
+      rgba(30, 34, 82, 1) 100%);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 1200px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  background-image: url(ubettor-logo.svg);
+  width: 200px;
+  height: 50px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.auth-buttons a {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+.login {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.signup {
+  background: linear-gradient(45deg, #8937EA, #2E5DEB);
+  color: #fff;
+}
+
+.hero {
+  background-color: #000;
+  background-image: url('hero-bg.jpg');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 5rem 1rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.hero .container {
+  max-width: 60%;
+  text-align: left;
+  margin: 0 0 0 auto;
+}
+
+.hero h1 {
+  font-size: 4.25rem;
+  line-height: 4.25rem;
+  margin-bottom: 1rem;
+  color: #0099FF
+}
+
+.hero h1 span {
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 0 2rem 0;
+}
+
+.cta-button {
+  background: linear-gradient(45deg, #8937EA, #2E5DEB);
+  padding: 0.75rem 2rem;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+  text-align: center;
+}
+.feature {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.feature span {
+  font-size: 1rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 0.5rem;
+}
+.feature-box {
+  width: 200px;
+  height: 90px;
+  background: linear-gradient(45deg, #2484C6, #7454A3);
+  border-radius: 10px;
+  margin: 0 auto 1rem auto;
+}
+.feature-box div {
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+#ft-1 {
+  background-image: url('ub-shapes1.svg');
+}
+#ft-2 {
+  background-image: url('ub-shapes2.svg');
+}
+#ft-3 {
+  background-image: url('ub-shapes3.svg');
+}
+#ft-4 {
+  background-image: url('ub-shapes4.svg');
+}
+footer {
+  border-top: 2px;
+  border-bottom: 2px;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-image: linear-gradient(45deg, #8937EA, #2E5DEB) 1;
+  padding: 3rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.footer-links h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+  color: #f1f1f1;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.footer-bottom span {
+  color: #999;
+  border-right: 1px solid #999;
+  padding: 0 1.5rem;
+}
+.footer-bottom span:last-child {
+  border-right: none;
+}
+#disclaimer {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 2rem;
+  text-align: center;
+}
