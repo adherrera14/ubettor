@@ -284,13 +284,17 @@ footer {
     width: 150px;
     height: 38px;
   }
-
+  .nav-item {
+    text-align: center;
+    font-size: 1.25rem;
+  }
   .hero {
     background-size: cover;
     background-position: top center;
     padding: 0;
     border-radius: 0;
   }
+
   .hero .container {
     width: 100%;
     max-width: none;
@@ -298,6 +302,7 @@ footer {
     padding: 10rem 1rem 1rem 1rem;
     margin: 200px 0 0 0;
   }
+
   .hero h1 {
     font-size: 3rem;
     line-height: 3rem;
@@ -374,13 +379,14 @@ footer {
   .footer-bottom span:last-child {
     border-bottom: none;
   }
-.footer-links ul {
-      border-top: 0;
-  border-bottom: 2px;
-  border-left: 0;
-  border-right: 0;
-  border-style: solid;
-  border-image: linear-gradient(45deg, #8937EA, #2E5DEB) 1;
+
+  .footer-links ul {
+    border-top: 0;
+    border-bottom: 2px;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-image: linear-gradient(45deg, #8937EA, #2E5DEB) 1;
     padding-bottom: 1rem;
   }
 }
