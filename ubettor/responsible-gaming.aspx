@@ -1,107 +1,69 @@
+<%@ Page Language="C#" %>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ubettor - Bet Now!</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="ubettor/styles.css" />
+<!--#include file="includes/head.inc"-->
+  <title>Responsible Gaming - Ubettor</title>
 </head>
 
 <body>
   <div class="main-content">
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <div class="logo"></div>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sports</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Live Betting</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Casino</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Horses</a>
-              </li>
-            </ul>
-            <div class="auth-buttons d-flex">
-              <a href="#" class="login me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-              <a href="#" class="signup" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+<!--#include file="includes/header.inc"-->
 
-    <section class="hero">
+    <section class="page-content">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 offset-lg-6">
-            <h1>Win Big<br><span>Bet Smart</span></h1>
-            <p>
-              Experience the ultimate sports betting platform with live odds, instant payouts, and premium gaming experience.
-            </p>
-            <a href="#" class="cta-button">BET NOW!</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="content-card">
+              <h1 class="page-title">Responsible Gaming</h1>
+              <div class="content-body">
+                <p>At UBettor.ag, we are committed to promoting responsible gaming and ensuring that our platform remains a safe and enjoyable environment for all users. We understand that gambling should be a form of entertainment, and we take our responsibility seriously to help prevent gambling-related harm.</p>
 
-    <section class="features">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="feature text-center">
-              <div class="feature-box mx-auto">
-                <div id="ft-1"></div>
+                <h2>Our Commitment</h2>
+                <p>We believe that responsible gaming is a shared responsibility between UBettor.ag and our customers. We are dedicated to providing tools, resources, and support to help our users maintain control over their gambling activities and enjoy our services responsibly.</p>
+
+                <h2>Recognize the Signs</h2>
+                <p>Problem gambling can affect anyone. Here are some warning signs to watch for:</p>
+                <ul>
+                  <li>Spending more time or money gambling than you can afford</li>
+                  <li>Chasing losses by gambling more</li>
+                  <li>Lying to family or friends about gambling activities</li>
+                  <li>Feeling anxious or depressed when not gambling</li>
+                  <li>Neglecting work, family, or other responsibilities</li>
+                  <li>Borrowing money to gamble</li>
+                </ul>
+
+                <h2>Tools and Controls</h2>
+                <p>UBettor.ag provides various tools to help you maintain control:</p>
+                <ul>
+                  <li><strong>Deposit Limits:</strong> Set daily, weekly, or monthly deposit limits</li>
+                  <li><strong>Time Limits:</strong> Control how long you spend on our platform</li>
+                  <li><strong>Loss Limits:</strong> Set limits on how much you can lose in a given period</li>
+                  <li><strong>Self-Exclusion:</strong> Temporarily or permanently exclude yourself from gambling</li>
+                  <li><strong>Reality Checks:</strong> Receive regular reminders about your gambling activity</li>
+                </ul>
+
+                <h2>Getting Help</h2>
+                <p>If you or someone you know needs help with gambling problems, please reach out to these professional organizations:</p>
+                <ul>
+                  <li><strong>National Problem Gambling Helpline:</strong> 1-800-522-4700</li>
+                  <li><strong>Gamblers Anonymous:</strong> <a href="https://www.gamblersanonymous.org" class="text-info" target="_blank">www.gamblersanonymous.org</a></li>
+                  <li><strong>National Council on Problem Gambling:</strong> <a href="https://www.ncpgambling.org" class="text-info" target="_blank">www.ncpgambling.org</a></li>
+                </ul>
+
+                <h2>Age Verification</h2>
+                <p>UBettor.ag is committed to preventing underage gambling. All users must be 18 years or older (or the legal gambling age in their jurisdiction) to use our services. We use advanced age verification systems and reserve the right to request proof of age at any time.</p>
+
+                <h2>Contact Us</h2>
+                <p>If you have questions about responsible gaming or need assistance with setting up controls on your account, please contact our support team at <a href="mailto:support@ubettor.ag" class="text-info">support@ubettor.ag</a>. We're here to help you enjoy gambling responsibly.</p>
               </div>
-              Secure & Licensed<br><span>Fully licensed and regulated</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature text-center">
-              <div class="feature-box mx-auto">
-                <div id="ft-2"></div>
-              </div>
-              24/7 Support<br><span>Round-the-clock assistance</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature text-center">
-              <div class="feature-box mx-auto">
-                <div id="ft-3"></div>
-              </div>
-              Best Odds<br><span>Competitive odds guaranteed</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature text-center">
-              <div class="feature-box mx-auto">
-                <div id="ft-4"></div>
-              </div>
-              Live Chat<br><span>Instant customer support</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div id="footer-placeholder"></div>
+    <!--#include file="includes/footer.inc"-->
   </div>
 
   <!-- Signup Modal -->
@@ -113,6 +75,7 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <p class="text-center mb-4">Create your account to access sports betting and casino games</p>
           <form id="signupForm">
             <div class="row g-3">
               <div class="col-md-6">
@@ -140,7 +103,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="agreeTerms" required>
                   <label class="form-check-label" for="agreeTerms">
-                    I agree to the <a href="terms.html" class="text-info" target="_blank">Terms of Service</a> and <a href="privacy.html" class="text-info" target="_blank">Privacy Policy</a>
+                    I agree to the <a href="terms.aspx" class="text-info">Terms of Service</a> and <a href="privacy.aspx" class="text-info">Privacy Policy</a>
                   </label>
                 </div>
               </div>
@@ -207,7 +170,6 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="footer.js"></script>
   <script>
     // Check URL parameters and auto-open signup modal if requested
     document.addEventListener('DOMContentLoaded', function() {

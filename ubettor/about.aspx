@@ -1,107 +1,33 @@
+<%@ Page Language="C#" %>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ubettor - Bet Now!</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="ubettor/styles.css" />
+<!--#include file="includes/head.inc"-->
+  <title>About Us - Ubettor</title>
 </head>
 
 <body>
   <div class="main-content">
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <div class="logo"></div>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sports</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Live Betting</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Casino</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Horses</a>
-              </li>
-            </ul>
-            <div class="auth-buttons d-flex">
-              <a href="#" class="login me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-              <a href="#" class="signup" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+<!--#include file="includes/header.inc"-->
 
-    <section class="hero">
+    <section class="page-content">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 offset-lg-6">
-            <h1>Win Big<br><span>Bet Smart</span></h1>
-            <p>
-              Experience the ultimate sports betting platform with live odds, instant payouts, and premium gaming experience.
-            </p>
-            <a href="#" class="cta-button">BET NOW!</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="content-card">
+              <h1 class="page-title">About Us</h1>
+              <div class="content-body">
+                <p>At UBettor.ag, we bring years of experience from operating some of the most renowned sportsbooks in the industry while developing software solutions that have truly changed the game. With a rich history of providing elite-level service to sports bettors around the world, we know that the most important part of our business is U.</p>
 
-    <section class="features">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="feature text-center">
-              <div class="feature-box mx-auto">
-                <div id="ft-1"></div>
+                <p>Our focus is always on you—the bettor. We are committed to delivering a seamless, exciting, and transparent betting experience, driven by innovation and a deep understanding of your needs. Whether you're a seasoned pro or just starting, UBettor.ag ensures that your betting experience is both thrilling and rewarding.</p>
               </div>
-              Secure & Licensed<br><span>Fully licensed and regulated</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature text-center">
-              <div class="feature-box mx-auto">
-                <div id="ft-2"></div>
-              </div>
-              24/7 Support<br><span>Round-the-clock assistance</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature text-center">
-              <div class="feature-box mx-auto">
-                <div id="ft-3"></div>
-              </div>
-              Best Odds<br><span>Competitive odds guaranteed</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="feature text-center">
-              <div class="feature-box mx-auto">
-                <div id="ft-4"></div>
-              </div>
-              Live Chat<br><span>Instant customer support</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div id="footer-placeholder"></div>
+    <!--#include file="includes/footer.inc"-->
   </div>
 
   <!-- Signup Modal -->
@@ -113,6 +39,7 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <p class="text-center mb-4">Create your account to access sports betting and casino games</p>
           <form id="signupForm">
             <div class="row g-3">
               <div class="col-md-6">
@@ -140,7 +67,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="agreeTerms" required>
                   <label class="form-check-label" for="agreeTerms">
-                    I agree to the <a href="terms.html" class="text-info" target="_blank">Terms of Service</a> and <a href="privacy.html" class="text-info" target="_blank">Privacy Policy</a>
+                    I agree to the <a href="terms.aspx" class="text-info">Terms of Service</a> and <a href="privacy.aspx" class="text-info">Privacy Policy</a>
                   </label>
                 </div>
               </div>
@@ -207,7 +134,6 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="footer.js"></script>
   <script>
     // Check URL parameters and auto-open signup modal if requested
     document.addEventListener('DOMContentLoaded', function() {

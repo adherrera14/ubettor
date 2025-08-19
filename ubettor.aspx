@@ -1,52 +1,14 @@
+<%@ Page Language="C#" %>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--#include file="ubettor/includes/head.inc"-->
   <title>Ubettor - Bet Now!</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="ubettor/styles.css" />
 </head>
 
 <body>
   <div class="main-content">
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <div class="logo"></div>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sports</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Live Betting</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Casino</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Horses</a>
-              </li>
-            </ul>
-            <div class="auth-buttons d-flex">
-              <a href="#" class="login me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-              <a href="#" class="signup" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+<!--#include file="ubettor/includes/header.inc"-->
 
     <section class="hero">
       <div class="container">
@@ -101,7 +63,7 @@
       </div>
     </section>
 
-    <div id="footer-placeholder"></div>
+    <!--#include file="ubettor/includes/footer.inc"-->
   </div>
 
   <!-- Signup Modal -->
@@ -140,7 +102,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="agreeTerms" required>
                   <label class="form-check-label" for="agreeTerms">
-                    I agree to the <a href="terms.html" class="text-info" target="_blank">Terms of Service</a> and <a href="privacy.html" class="text-info" target="_blank">Privacy Policy</a>
+                    I agree to the <a href="ubettor/terms.aspx" class="text-info" target="_blank">Terms of Service</a> and <a href="ubettor/privacy.aspx" class="text-info" target="_blank">Privacy Policy</a>
                   </label>
                 </div>
               </div>
@@ -207,7 +169,6 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="footer.js"></script>
   <script>
     // Check URL parameters and auto-open signup modal if requested
     document.addEventListener('DOMContentLoaded', function() {

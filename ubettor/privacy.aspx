@@ -1,52 +1,14 @@
+<%@ Page Language="C#" %>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--#include file="includes/head.inc"-->
   <title>Privacy Policy - Ubettor</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="ubettor/styles.css" />
 </head>
 
 <body>
   <div class="main-content">
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <div class="logo"></div>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#sports">Sports</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="alert('Coming Soon!')">Live Betting</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="alert('Coming Soon!')">Casino</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="alert('Coming Soon!')">Horses</a>
-              </li>
-            </ul>
-            <div class="auth-buttons d-flex">
-              <a href="#" class="login me-2">Login</a>
-              <a href="#" class="signup" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+<!--#include file="includes/header.inc"-->
 
     <section class="page-content">
       <div class="container">
@@ -85,7 +47,7 @@
       </div>
     </section>
 
-    <div id="footer-placeholder"></div>
+    <!--#include file="includes/footer.inc"-->
   </div>
 
   <!-- Signup Modal -->
@@ -125,7 +87,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="agreeTerms" required>
                   <label class="form-check-label" for="agreeTerms">
-                    I agree to the <a href="terms.html" class="text-info">Terms of Service</a> and <a href="privacy.html" class="text-info">Privacy Policy</a>
+                    I agree to the <a href="terms.aspx" class="text-info">Terms of Service</a> and <a href="privacy.aspx" class="text-info">Privacy Policy</a>
                   </label>
                 </div>
               </div>
@@ -148,8 +110,50 @@
     </div>
   </div>
 
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content signup-modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Welcome Back</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-center mb-4">Sign in to your Ubettor account</p>
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email Address</label>
+              <input type="email" class="form-control signup-input" id="loginEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control signup-input" id="loginPassword" required>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">
+                Remember me
+              </label>
+            </div>
+            <div class="mb-3 text-center">
+              <a href="#" class="text-info small">Forgot your password?</a>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" form="loginForm" class="btn signup-btn">Sign In</button>
+        </div>
+        <div class="text-center pb-3">
+          <small class="text-muted">Don't have an account? 
+            <a href="#" class="text-info" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up here</a>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="footer.js"></script>
   <script>
     // Check URL parameters and auto-open signup modal if requested
     document.addEventListener('DOMContentLoaded', function() {
@@ -191,6 +195,30 @@
       const url = new URL(window.location);
       url.searchParams.delete('signup');
       window.history.replaceState({}, document.title, url.pathname);
+    });
+
+    // Login form validation and submission
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+      
+      if (!email || !password) {
+        alert('Please fill in all fields!');
+        return;
+      }
+      
+      // Here you would typically send the login data to your server
+      // For now, we'll just simulate a successful login
+      alert('Login successful! Welcome back to Ubettor!');
+      
+      // Close the modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+      modal.hide();
+      
+      // Reset the form
+      this.reset();
     });
   </script>
 </body>

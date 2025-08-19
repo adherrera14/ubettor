@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #fff;
-  line-height: 1.5;
+  line-height: 1.6;
   background: linear-gradient(90deg,
       rgba(27, 39, 60, 1) 0%,
       rgba(30, 34, 82, 1) 100%);
@@ -44,7 +44,7 @@ header {
 }
 
 .logo {
-  background-image: url(ubettor-logo.svg);
+  background-image: url(images/ubettor-logo.svg);
   width: 200px;
   height: 50px;
   background-size: 100%;
@@ -114,7 +114,7 @@ header {
 /* Hero Section */
 .hero {
   background-color: #000;
-  background-image: url('hero-bg.jpg');
+  background-image: url('images/hero-bg.jpg');
   background-size: contain;
   background-position: left center;
   background-repeat: no-repeat;
@@ -211,19 +211,19 @@ header {
 }
 
 #ft-1 {
-  background-image: url('ub-shapes1.svg');
+  background-image: url('images/ub-shapes1.svg');
 }
 
 #ft-2 {
-  background-image: url('ub-shapes2.svg');
+  background-image: url('images/ub-shapes2.svg');
 }
 
 #ft-3 {
-  background-image: url('ub-shapes3.svg');
+  background-image: url('images/ub-shapes3.svg');
 }
 
 #ft-4 {
-  background-image: url('ub-shapes4.svg');
+  background-image: url('images/ub-shapes4.svg');
 }
 
 /* Footer */
