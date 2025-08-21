@@ -44,7 +44,7 @@ header {
 }
 
 .logo {
-  background-image: url(images/ubettor-logo.svg);
+  background-image: url('images/ubettor-logo.svg');
   width: 200px;
   height: 50px;
   background-size: 100%;
